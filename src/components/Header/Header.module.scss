@@ -1,0 +1,42 @@
+@import "../../mixins.scss";
+
+.header__wrapper {
+  @include flex();
+  padding-top: 37px;
+}
+.header__procent {
+  @include circle(#ee26c2, 40px, 40px, 8px);
+  margin-right: 9px;
+}
+
+.header__icons__wrapper {
+  @include flex();
+  width: 477px;
+}
+
+.header__flex {
+  @include flex();
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.header__settings {
+  margin-right: 12px;
+}
+@media screen and (max-width: 950px) {
+
+  .header__wrapper > img {
+    width: 209px;
+    height: 29px;
+  }
+
+  .header__flex {
+  font-size: 15px;
+}
+.header__settings {
+  margin-right: 28px;
+}
+.header__icons__wrapper {
+  width: 407px;
+}
+}

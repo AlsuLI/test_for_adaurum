@@ -1,0 +1,11 @@
+@mixin circle($background-color, $width, $height, $padding) {
+  background-color: $background-color;
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  padding: $padding;
+}
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+}

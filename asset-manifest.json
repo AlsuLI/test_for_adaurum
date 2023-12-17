@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/test_for_adaurum/static/css/main.ff4db34f.css",
+    "main.css": "/test_for_adaurum/static/css/main.438178d1.css",
     "main.js": "/test_for_adaurum/static/js/main.86a9a58a.js",
     "static/media/Group 41.svg": "/test_for_adaurum/static/media/Group 41.1b04671603435bb61897c7d0d2dc84ad.svg",
     "static/media/Frame.svg": "/test_for_adaurum/static/media/Frame.be92a0d762d4fc58e46b.svg",
@@ -19,11 +19,11 @@
     "static/media/user.svg": "/test_for_adaurum/static/media/user.db109c181eedd018f79556e3f27e9194.svg",
     "static/media/Enter.svg": "/test_for_adaurum/static/media/Enter.c4bac049130424d3dbc9.svg",
     "static/media/Group 19.svg": "/test_for_adaurum/static/media/Group 19.a2f5a7e9217ebbbaaed8dd6f98757759.svg",
-    "main.ff4db34f.css.map": "/test_for_adaurum/static/css/main.ff4db34f.css.map",
+    "main.438178d1.css.map": "/test_for_adaurum/static/css/main.438178d1.css.map",
     "main.86a9a58a.js.map": "/test_for_adaurum/static/js/main.86a9a58a.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff4db34f.css",
+    "static/css/main.438178d1.css",
     "static/js/main.86a9a58a.js"
   ]
 }

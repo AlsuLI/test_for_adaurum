@@ -20,7 +20,7 @@ export const Main = () => {
       addMessage(input);
       handleSubmit(e);
       setInput("");
-      handleClick()
+      handleClick();
     }
   };
 
@@ -53,15 +53,19 @@ export const Main = () => {
     //   });
   };
 
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    setIsActive();
   };
 
   return (
     <>
       <section className={s.main__wrapper}>
+        <div div className={s.main__folder__btns}>
+          <Button btn="gray">Медиапланы</Button>
+          <Button btn="gray">Отчеты</Button>
+        </div>
         <div className={s.main__folder__wrapper}>
           <h3>Файлы</h3>
           <div className={s.main__folder}>
@@ -83,39 +87,38 @@ export const Main = () => {
             </div>
             <DropButton />
           </div>
-          <div >
-            <div className={isActive ? s.main__chat__active : s.main__chat}>
-              {messages.map((el) => (
-                <MessageForm key={el.id}>
-                  <li className={s.main__message}>{el.msg}</li>
-                </MessageForm>
-              ))}
-              <p className={s.main__chat__text}>
-                Это чат с администратором. Ты можешь с ним пообщаться по любому
-                вопросу о нашем сервисе и узнать о ходе работы
-              </p>
-              <div className={s.main__btn__wrapper}>
-                <Button btn="plan">Заказать медиаплан</Button>
-                <Button btn="report">Заказать отчет</Button>
-              </div>
 
-              <input
-                type="textarea"
-                placeholder="Введите сообщение для администратора"
-                className={s.main__input}
-                value={input}
-                onChange={handleInputChange}
-              />
-              <input type="file" className={s.main__input__docs} />
-              <label className={s.main__label__docs} for="file"></label>
-              <input type="file" className={s.main__input__img} />
-              <label
-                className={s.main__label__img}
-                accept="image/*"
-                for="file"
-              ></label>
-              <SubmitButton handleSend={handleSend} />
+          <div className={isActive ? s.main__chat : s.main__chat__active}>
+            {messages.map((el) => (
+              <MessageForm key={el.id}>
+                <li className={s.main__message}>{el.msg}</li>
+              </MessageForm>
+            ))}
+            <p className={s.main__chat__text}>
+              Это чат с администратором. Ты можешь с ним пообщаться по любому
+              вопросу о нашем сервисе и узнать о ходе работы
+            </p>
+            <div className={s.main__btn__wrapper}>
+              <Button btn="plan">Заказать медиаплан</Button>
+              <Button btn="report">Заказать отчет</Button>
             </div>
+
+            <input
+              type="textarea"
+              placeholder="Введите сообщение для администратора"
+              className={s.main__input}
+              value={input}
+              onChange={handleInputChange}
+            />
+            <input type="file" className={s.main__input__docs} />
+            <label className={s.main__label__docs} for="file"></label>
+            <input type="file" className={s.main__input__img} />
+            <label
+              className={s.main__label__img}
+              accept="image/*"
+              for="file"
+            ></label>
+            <SubmitButton handleSend={handleSend} />
           </div>
         </div>
       </section>

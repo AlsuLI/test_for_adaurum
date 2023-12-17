@@ -19,4 +19,7 @@ export const Button = ({ children, btn }) => {
    if (btn === "white") {
      return <button className={s.button__white}>{children}</button>;
    }
+     if (btn === "gray") {
+       return <button className={s.button__gray}>{children}</button>;
+     }
 };

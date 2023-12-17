@@ -4,6 +4,8 @@
   height: $height;
   border-radius: 50%;
   padding: $padding;
+  border: none;
+  cursor: pointer;
 }
 @mixin flex() {
   display: flex;

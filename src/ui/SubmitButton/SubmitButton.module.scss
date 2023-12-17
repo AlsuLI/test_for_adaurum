@@ -31,18 +31,35 @@
 }
 
 @media screen and (max-width: 1250px) {
-  .input__submit, .label__submit  {
+  .input__submit,
+  .label__submit {
     top: 1167px;
     right: 164px;
   }
 }
 @media screen and (max-width: 850px) {
-  .input__submit, .label__submit {
+  .input__submit,
+  .label__submit {
     right: 105px;
   }
 }
 @media screen and (max-width: 765px) {
-  .input__submit, .label__submit  {
+  .input__submit,
+  .label__submit {
     top: 1200px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .input__submit,
+  .label__submit {
+    top: 772px;
+    right: 85px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .input__submit,
+  .label__submit {
+    top: 772px;
+    right: 45px;
   }
 }

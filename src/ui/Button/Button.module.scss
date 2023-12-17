@@ -2,29 +2,40 @@
 .button__plan {
   @include circle(#ee26c2, 210px, 43px, 12px 22px);
   border-radius: 21px;
-  border: none;
   color: #fff;
   font-weight: 600;
 }
 .button__report {
   @include circle(#2676ee, 166px, 43px, 12px 22px);
   border-radius: 21px;
-  border: none;
   color: #fff;
   font-weight: 600;
 }
 .button__white {
   @include circle(#fff, 40px, 40px, 8px);
-  border: none;
-  cursor: pointer;
 }
 .button__pink {
   @include circle(#ee26c2, 40px, 40px, 8px);
-  border: none;
-  cursor: pointer;
+}
+.button__gray {
+  display: none;
 }
 @media screen and (max-width: 765px) {
   .button__pink {
     display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .button__gray {
+    @include circle(#cbcbcb, none, 41px, 12px);
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 12px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .button__report, .button__plan {
+    font-size: 14px;
   }
 }

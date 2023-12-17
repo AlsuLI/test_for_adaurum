@@ -71,9 +71,9 @@
     border-radius: 20px;
     margin-top: 28px;
   }
-   &__chat__active > p {
+  &__chat__active > p {
     display: none;
-   }
+  }
   &__input {
     position: relative;
     height: 144px;
@@ -81,6 +81,7 @@
     border: #ee26c2 2px solid;
     padding: 25px 20px 20px 20px;
     margin-top: 20px;
+    text-align: start;
   }
   &__btn__wrapper {
     display: flex;
@@ -91,7 +92,7 @@
   }
   &__chat__text {
     text-align: center;
-    width: 463px;
+    max-width: 463px;
     text-align: center;
     font-weight: 500;
     font-size: 16px;
@@ -159,9 +160,9 @@
   }
   &__message {
     color: #000000;
+    font-weight: 500;
   }
 }
-
 @media screen and (max-width: 1250px) {
   .main {
     &__wrapper {
@@ -219,6 +220,9 @@
   }
 }
 @media screen and (max-width: 765px) {
+  .main__chat {
+    background-size: 130px 132px;
+  }
   .main__input__docs,
   .main__label__docs {
     top: 1241px;
@@ -233,6 +237,7 @@
     &__helper__wrapper {
       margin-top: 20px;
       padding: 0;
+      box-shadow: none;
     }
     &__helper__text {
       gap: 20px;
@@ -240,15 +245,55 @@
       width: 100%;
       align-items: flex-start;
     }
+    &__helper__text > h3 {
+      font-size: 20px;
+    }
+    &__helper__header {
+      padding: 0 20px;
+    }
     &__folder__wrapper {
       display: none;
     }
     &__chat {
       border-radius: 0;
+      padding: 20px;
     }
     &__btn__wrapper {
       flex-direction: column-reverse;
       align-items: flex-end;
     }
+    &__folder__btns {
+      background: #fff;
+      padding: 0 20px;
+    }
+    &__wrapper {
+      background: #fff;
+    }
+    &__chat__text {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .main__input__docs,
+  .main__label__docs {
+    top: 808px;
+    left: 81px;
+  }
+  .main__input__img,
+  .main__label__img {
+    top: 808px;
+    left: 120px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main__input__docs,
+  .main__label__docs {
+    top: 808px;
+    left: 40px;
+  }
+  .main__input__img,
+  .main__label__img {
+    top: 808px;
+    left: 80px;
   }
 }

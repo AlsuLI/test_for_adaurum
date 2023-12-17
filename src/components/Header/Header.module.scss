@@ -77,9 +77,22 @@
   .header__flex {
     flex-direction: column;
   }
-    .header__icons__wrapper {
+  .header__icons__wrapper {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 20px;
+  }
+    .header__icons {
+    font-size: 14px;
+    gap: 0;
+  }
+}
+@media screen and (max-width: 586px) {
+  .header__wrapper {
+    padding: 20px 28px;
+  }
+  .header__sets {
+    position: absolute;
+    right: 20px;
   }
 }

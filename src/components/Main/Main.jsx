@@ -1,36 +1,121 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./Main.module.scss";
-import folder from "../../assets/Group 41.png";
-import btn from "../../assets/Group 19.svg";
+import folder from "../../assets/Group 41.svg";
+import folderAdd from "../../assets/folder-add.svg";
+import { Button } from "../../ui/Button/Button";
+import { DropButton } from "../../ui/DropButton/DropButton";
+import { SubmitButton } from "../../ui/SubmitButton/SubmitButton";
+import { MessageForm } from "../../ui/MessageForm/MessageForm";
 
 export const Main = () => {
+  const [messages, setMessages] = useState([]);
+
+  const addMessage = (msg) => {
+    setMessages([...messages, { id: new Date().toISOString(), msg: msg }]);
+  };
+  const [input, setInput] = useState("");
+
+  const handleSend = (e) => {
+    if (input.trim() !== "") {
+      addMessage(input);
+      handleSubmit(e);
+      setInput("");
+      handleClick()
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  // const [posts, setPosts] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // fetch("https://my-json-server.typicode.com/typicode/demo/posts", {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     message: input,
+    //     userId: Math.random().toString(36).slice(2),
+    //   }),
+    //   headers: {
+    //     "Content-type": "application/json; charset=UTF-8",
+    //   },
+    // })
+    //   .then((res) => res.json())
+    //   .then((post) => {
+    //     setPosts((posts) => [post, ...posts]);
+    //     setInput("");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err.message);
+    //   });
+  };
+
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <>
       <section className={s.main__wrapper}>
         <div className={s.main__folder__wrapper}>
           <h3>Файлы</h3>
-          <img src={folder} alt="" />
-          <p>
-            Закажи у личного помощника медиаплан. Он появится в этом разделе
-          </p>
+          <div className={s.main__folder}>
+            <img src={folder} alt="" />
+            <p>
+              Закажи у личного помощника медиаплан. Он появится в этом разделе
+            </p>
+          </div>
         </div>
 
         <div className={s.main__helper__wrapper}>
           <div className={s.main__helper__header}>
-            <h3>Личный помощник</h3>
-            <div>
-              <p>Jim Davidson</p>
-              <p>Jim Davidson@adaurum.ru</p>
-              <button>
-                <img src={btn} alt="" />
-              </button>
+            <div className={s.main__helper__text}>
+              <h3>Личный помощник</h3>
+              <div>
+                <p className={s.main__helper__name}>Jim Davidson</p>
+                <p className={s.main__helper__mail}>Jim Davidson@adaurum.ru</p>
+              </div>
             </div>
+            <DropButton />
           </div>
+          <div >
+            <div className={isActive ? s.main__chat__active : s.main__chat}>
+              {messages.map((el) => (
+                <MessageForm key={el.id}>
+                  <li className={s.main__message}>{el.msg}</li>
+                </MessageForm>
+              ))}
+              <p className={s.main__chat__text}>
+                Это чат с администратором. Ты можешь с ним пообщаться по любому
+                вопросу о нашем сервисе и узнать о ходе работы
+              </p>
+              <div className={s.main__btn__wrapper}>
+                <Button btn="plan">Заказать медиаплан</Button>
+                <Button btn="report">Заказать отчет</Button>
+              </div>
 
-          <div className={s.main__chat}>
-            <button className={s.main__btn__plan}>Заказать медиаплан</button>
-            <button className={s.main__btn__report}>Заказать отчет</button>
-            <input type="text" className={s.main__input} />
+              <input
+                type="textarea"
+                placeholder="Введите сообщение для администратора"
+                className={s.main__input}
+                value={input}
+                onChange={handleInputChange}
+              />
+              <input type="file" className={s.main__input__docs} />
+              <label className={s.main__label__docs} for="file"></label>
+              <input type="file" className={s.main__input__img} />
+              <label
+                className={s.main__label__img}
+                accept="image/*"
+                for="file"
+              ></label>
+              <SubmitButton handleSend={handleSend} />
+            </div>
           </div>
         </div>
       </section>

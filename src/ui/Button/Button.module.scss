@@ -1,0 +1,30 @@
+@import "../../mixins.scss";
+.button__plan {
+  @include circle(#ee26c2, 210px, 43px, 12px 22px);
+  border-radius: 21px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.button__report {
+  @include circle(#2676ee, 166px, 43px, 12px 22px);
+  border-radius: 21px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.button__white {
+  @include circle(#fff, 40px, 40px, 8px);
+  border: none;
+  cursor: pointer;
+}
+.button__pink {
+  @include circle(#ee26c2, 40px, 40px, 8px);
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 765px) {
+  .button__pink {
+    display: none;
+  }
+}

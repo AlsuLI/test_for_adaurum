@@ -4,39 +4,82 @@
   @include flex();
   padding-top: 37px;
 }
-.header__procent {
-  @include circle(#ee26c2, 40px, 40px, 8px);
-  margin-right: 9px;
-}
-
 .header__icons__wrapper {
   @include flex();
-  width: 477px;
+  padding-right: 26px;
+  width: 380px;
 }
-
 .header__flex {
   @include flex();
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.125rem;
+  width: 100%;
 }
 .header__settings {
   margin-right: 12px;
 }
-@media screen and (max-width: 950px) {
+.header__icons > p > span {
+  display: none;
+  color: #000000;
+}
+.header__icons > p {
+  color: #000000;
+}
 
-  .header__wrapper > img {
+.header__icons {
+  @include flex();
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  gap: 9px;
+}
+.header__sets {
+  @include flex();
+}
+@media screen and (max-width: 960px) {
+  .Pchicken {
     width: 209px;
     height: 29px;
   }
-
   .header__flex {
-  font-size: 15px;
+    font-size: 15px;
+  }
+  .header__settings {
+    margin-right: 28px;
+  }
+  .header__icons__wrapper {
+    padding-right: 26px;
+    width: 346px;
+  }
+  .header__icons {
+    font-size: 16px;
+  }
 }
-.header__settings {
-  margin-right: 28px;
-}
-.header__icons__wrapper {
-  width: 407px;
-}
+@media screen and (max-width: 765px) {
+  .Pchicken {
+    width: 181px;
+    height: 24px;
+  }
+  .header__procent {
+    display: none;
+  }
+  .header__icons > p > span {
+    display: inline;
+    font-size: 12px;
+  }
+  .header__icons > p {
+    display: inline;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+  }
+  .button__pink {
+    display: none;
+  }
+  .header__flex {
+    flex-direction: column;
+  }
+    .header__icons__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
 }

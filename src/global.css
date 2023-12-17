@@ -5,3 +5,7 @@
   font-family: "Inter", sans-serif;
   color: #525252;
 }
+body {
+  height: 99vh;
+  width: 99vw;
+}

@@ -7,7 +7,7 @@ import './global.css';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Container color="">
         <Header />
         <Main />

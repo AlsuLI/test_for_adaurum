@@ -1,0 +1,48 @@
+.input__submit {
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  top: 709px;
+  right: 190px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.label__submit {
+  background-image: url("../../assets/Enter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ee26c2;
+  position: absolute;
+  z-index: 1;
+  top: 709px;
+  right: 189px;
+  padding: 13px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.label__submit > span {
+  position: absolute;
+  top: 51px;
+  right: 13px;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 1250px) {
+  .input__submit, .label__submit  {
+    top: 1167px;
+    right: 164px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .input__submit, .label__submit {
+    right: 105px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .input__submit, .label__submit  {
+    top: 1200px;
+  }
+}

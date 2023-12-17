@@ -4,13 +4,14 @@
     padding-top: 38px;
     background-color: #f5f5f5;
     @include flex();
+    padding-bottom: 60px;
   }
   &__folder__wrapper {
     max-width: 295px;
     min-height: 709px;
     height: 100%;
     background-color: #fff;
-    padding: 20px;
+    padding: 28px 20px;
     box-shadow: 0px 0px 30px 0px #00000014;
     border-radius: 20px;
     margin-right: 30px;
@@ -22,26 +23,145 @@
     padding: 28px;
     box-shadow: 0px 0px 30px 0px #00000014;
     border-radius: 20px;
+    max-height: 709px;
   }
+  &__folder > img {
+    padding-top: 46px;
+    align-items: center;
+  }
+  &__folder > p {
+    color: #000000;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 500;
+  }
+  &__folder__wrapper > h3 {
+    color: #000000;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
   &__helper__header {
-    @include flex();
+    display: flex;
+  }
+  &__helper__text > h3 {
+    color: #000000;
+    font-weight: 600;
+    font-size: 24px;
   }
   &__chat {
     background-color: #ebebeb;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("../../assets/Frame.svg");
+    background-position: 50% 50px;
+    background-repeat: no-repeat;
+    height: 570px;
+    border-radius: 20px;
+    margin-top: 28px;
   }
-  &__btn__plan {
-    @include circle(#ee26c2, 210px, 43px, 12px 22px);
-    border-radius: 21px;
-    border: none;
+  &__chat__active {
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: none;
+    height: 570px;
+    border-radius: 20px;
+    margin-top: 28px;
   }
-  &__btn__report {
-    @include circle(#2676ee, 166px, 43px, 12px 22px);
-    border-radius: 21px;
-    border: none;
+   &__chat__active > p {
+    display: none;
+   }
+  &__input {
+    position: relative;
+    height: 144px;
+    border-radius: 20px;
+    border: #ee26c2 2px solid;
+    padding: 25px 20px 20px 20px;
+    margin-top: 20px;
+  }
+  &__btn__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 57px;
+    margin-left: 20px;
+    gap: 20px;
+  }
+  &__chat__text {
+    text-align: center;
+    width: 463px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__helper__text {
+    @include flex();
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  &__helper__text > div {
+    @include flex();
+    width: 322px;
+    padding-right: 26px;
+  }
+  &__helper__mail {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  &__helper__name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+  }
+  &__input__docs {
+    opacity: 0;
+    width: 24px;
+    position: absolute;
+    z-index: 2;
+    top: 742px;
+    left: 497px;
+  }
+  &__main__chat > img {
+    width: 24px;
+    height: 24px;
+  }
+  &__label__docs {
+    background-image: url("../../assets/folder-add.svg");
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 1;
+    top: 742px;
+    left: 497px;
+  }
+  &__input__img {
+    opacity: 0;
+    width: 24px;
+    position: absolute;
+    z-index: 2;
+    top: 742px;
+    left: 535px;
+  }
+  &__label__img {
+    background-image: url("../../assets/img-add.svg");
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 1;
+    top: 742px;
+    left: 535px;
+  }
+  &__message {
+    color: #000000;
   }
 }
+
 @media screen and (max-width: 1250px) {
   .main {
     &__wrapper {
@@ -51,9 +171,84 @@
     &__folder__wrapper {
       max-width: 100%;
       min-height: 100%;
-      background-color: #fff;
       padding: 30px 20px;
-        margin-right: 0;
+      margin-right: 0;
+    }
+    &__helper__wrapper {
+      margin-top: 20px;
+    }
+    &__folder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__folder > p {
+      padding-right: 20px;
+      text-align: center;
+      font-weight: 500;
+      max-width: 255px;
+    }
+    &__folder > img {
+    }
+    &__input__docs {
+      top: 1205px;
+      left: 137px;
+    }
+    &__label__docs {
+      top: 1205px;
+      left: 137px;
+    }
+    &__input__img {
+      top: 1205px;
+      left: 174px;
+    }
+    &__label__img {
+      top: 1205px;
+      left: 174px;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .main__input__docs,
+  .main__label__docs {
+    left: 91px;
+  }
+  .main__input__img,
+  .main__label__img {
+    left: 128px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .main__input__docs,
+  .main__label__docs {
+    top: 1241px;
+  }
+  .main__input__img,
+  .main__label__img {
+    top: 1241px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main {
+    &__helper__wrapper {
+      margin-top: 20px;
+      padding: 0;
+    }
+    &__helper__text {
+      gap: 20px;
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+    }
+    &__folder__wrapper {
+      display: none;
+    }
+    &__chat {
+      border-radius: 0;
+    }
+    &__btn__wrapper {
+      flex-direction: column-reverse;
+      align-items: flex-end;
     }
   }
 }

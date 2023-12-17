@@ -8,11 +8,13 @@ import { SubmitButton } from "../../ui/SubmitButton/SubmitButton";
 import { MessageForm } from "../../ui/MessageForm/MessageForm";
 
 export const Main = () => {
+  // Создаем массив
   const [messages, setMessages] = useState([]);
 
   const addMessage = (msg) => {
     setMessages([...messages, { id: new Date().toISOString(), msg: msg }]);
   };
+// принимаем value инпута
   const [input, setInput] = useState("");
 
   const handleSend = (e) => {
@@ -27,6 +29,8 @@ export const Main = () => {
   const handleInputChange = (e) => {
     setInput(e.target.value);
   };
+
+  //пост запрос на бэк
 
   // const [posts, setPosts] = useState([]);
 
@@ -52,6 +56,8 @@ export const Main = () => {
     //     console.log(err.message);
     //   });
   };
+
+  // использую для смены классов
 
   const [isActive, setIsActive] = useState(true);
 
@@ -89,11 +95,7 @@ export const Main = () => {
           </div>
 
           <div className={isActive ? s.main__chat : s.main__chat__active}>
-            {messages.map((el) => (
-              <MessageForm key={el.id}>
-                <li className={s.main__message}>{el.msg}</li>
-              </MessageForm>
-            ))}
+            <MessageForm messages={messages} />
             <p className={s.main__chat__text}>
               Это чат с администратором. Ты можешь с ним пообщаться по любому
               вопросу о нашем сервисе и узнать о ходе работы

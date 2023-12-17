@@ -1,8 +1,33 @@
-.message__form {
+.message {
   width: 541px;
   border-radius: 12px;
   background-color: #fff;
   padding: 16px 22px;
   list-style-type: none;
   margin-top: 42px;
+  color: #000000;
+  font-weight: 500;
+  margin-right: 20px;
+}
+.message__form {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: scroll;
+  padding-top: 10px;
+}
+@media screen and (max-width: 950px) {
+  .message {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .message {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .message {
+    width: 301px;
+  }
 }

@@ -24,3 +24,9 @@
 a:hover {
   color: #ee26c2;
 }
+@media screen and (max-width: 850px) {
+  .portal__active {
+    font-size: 13px;
+  }
+}
+  

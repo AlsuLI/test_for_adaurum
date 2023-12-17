@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/test_for_adaurum/static/css/main.bed0ca89.css",
+    "main.js": "/test_for_adaurum/static/js/main.239166e2.js",
+    "static/media/Group 41.svg": "/test_for_adaurum/static/media/Group 41.1b04671603435bb61897c7d0d2dc84ad.svg",
+    "static/media/Frame.svg": "/test_for_adaurum/static/media/Frame.be92a0d762d4fc58e46b.svg",
+    "static/media/iconGrey.svg": "/test_for_adaurum/static/media/iconGrey.32e00988279af978e33cd139ab16368a.svg",
+    "static/media/Pchicken.svg": "/test_for_adaurum/static/media/Pchicken.3502d0d88015c2392d4d7062cb3252b6.svg",
+    "static/media/whatsapp.svg": "/test_for_adaurum/static/media/whatsapp.7d54bafd394874fd8aaea9ddbb3be3cd.svg",
+    "static/media/telegram.svg": "/test_for_adaurum/static/media/telegram.22f6dfa45e000563bd49e8fe95a4de9d.svg",
+    "static/media/Settings.svg": "/test_for_adaurum/static/media/Settings.05be0e04bfda5a04ba7d76b771435761.svg",
+    "static/media/procent.svg": "/test_for_adaurum/static/media/procent.ec29dd92ceb2393ef06432321069ab3c.svg",
+    "static/media/lang.svg": "/test_for_adaurum/static/media/lang.a56de35b0d62e92a489d3372c80e0689.svg",
+    "static/media/folder-add.svg": "/test_for_adaurum/static/media/folder-add.8441bfa42cb6dc532a9e71f420d0ccaa.svg",
+    "static/media/mail.svg": "/test_for_adaurum/static/media/mail.672be0364a3297d68f6701b8da0ec0cf.svg",
+    "static/media/Exit.svg": "/test_for_adaurum/static/media/Exit.b7f67e9270b5fc2bd54713b25757aac5.svg",
+    "index.html": "/test_for_adaurum/index.html",
+    "static/media/img-add.svg": "/test_for_adaurum/static/media/img-add.4e45e78d0e528931accf.svg",
+    "static/media/user.svg": "/test_for_adaurum/static/media/user.db109c181eedd018f79556e3f27e9194.svg",
+    "static/media/Enter.svg": "/test_for_adaurum/static/media/Enter.c4bac049130424d3dbc9.svg",
+    "static/media/Group 19.svg": "/test_for_adaurum/static/media/Group 19.a2f5a7e9217ebbbaaed8dd6f98757759.svg",
+    "main.bed0ca89.css.map": "/test_for_adaurum/static/css/main.bed0ca89.css.map",
+    "main.239166e2.js.map": "/test_for_adaurum/static/js/main.239166e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bed0ca89.css",
+    "static/js/main.239166e2.js"
+  ]
+}

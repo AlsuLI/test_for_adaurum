@@ -273,6 +273,9 @@
       font-size: 14px;
       font-weight: 500;
     }
+    &__chat__active {
+      border-radius: 0;
+    }
   }
   .main__input__docs,
   .main__label__docs {
@@ -283,6 +286,18 @@
   .main__label__img {
     top: 808px;
     left: 120px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main__input__docs,
+  .main__label__docs {
+    top: 808px;
+    left: 60px;
+  }
+  .main__input__img,
+  .main__label__img {
+    top: 808px;
+    left: 100px;
   }
 }
 @media screen and (max-width: 375px) {
